@@ -11,6 +11,13 @@ change directory to client then run npm install
 start development server with npm start
 navigate to http://localhost:3000 in your browser to access app
 
+for backend 
+change to server then npm run dev
+backend run  to http://localhost:5000   develop locally run the medication reminder express server locally:
+
+after click save butthon then check please the reminders then email sent to both user and creater and
+
+
 # Path
 Register User -> Login User -> Update medication and add /View user Profile
 
@@ -55,14 +62,7 @@ Register User -> Login User -> Update medication and add /View user Profile
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of PatientId |
 
-
-for backend 
-change to server then npm run dev
-backend run  to http://localhost:5000   develop locally run the medication reminder express server locally:
-
-after click save butthon then check please the reminders then email sent to both user and creater and
-
-todo
+## Todo
 if i have more time i will be add more feature and functionality like
 user can add more modication  details
 delete medication details 
