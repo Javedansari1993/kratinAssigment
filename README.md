@@ -20,10 +20,6 @@ Register User -> Login User -> Update medication and add /View user Profile
 
 **Server:** Node, Express, mongoDB, JWT
 
-## Authors
-
-- [@octokatherine](https://github.com/Javedansari1993/kratinAssigment)
-
 ## API Reference
 
 #### Get all items
@@ -75,3 +71,6 @@ and deploy full mern website
 
 ## 🛠 Skills
 Javascript, HTML, CSS...Express, node , mongoDB, react , redux, bootstrap, tailwind
+
+## 🚀 About Me
+I'm a full stack developer...
