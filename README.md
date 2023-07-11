@@ -28,4 +28,4 @@ for backend
 change to server then npm run dev
 backend run  to http://localhost:5000   develop locally run the medication reminder express server locally:
 
-
+after click save butthon then check please the reminders then email sent to both user and creater and
