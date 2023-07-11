@@ -2,14 +2,12 @@ Medication Management system
 This project using NodeJS, Express, MongoDB Atlas database, Mongoose and including perticular routes.
 One use case for elderly care is medication management. Many elderly individuals require multiple medications and often struggle with remembering the correct dosages and schedules. To address this, you will create a working prototype for a medication reminder system using JavaScript, ReactJS, and NodeJS.
 
-##Technologies
+## Tech Stack
 
-Tech	  Description
-React	  Javascript framework for single page apps
-Redux	  Application state management for react
-Express	Server framework for Node
-MongoDB	   No-SQL database
-Nodemailer	Automated email generator
+**Client:** React, bootstrap
+
+**Server:** Node, Express, mongoDB, JWT
+
 API
 The server code can be found here
 GET /api/users/medication :: returns array of medication reminders associated with user
