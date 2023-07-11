@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: "Crimson Text";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(64, 160, 192);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.react-calendar span {
+  font-size: 1.1rem;
+}
+
+.react-calendar__month-view__weekdays {
+  color: black;
+  font-size: 1rem;
+}
+
+/* .react-calendar__tile.react-calendar__month-view__days__day {
+   color: grey; 
+} */
+.list-group-item {
+  background-color: rgb(64, 160, 192);
+  width: 80%;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .list-group-item,
+  .list-group-item.tohide {
+    background-color: rgb(64, 160, 192);
+    width: 100%;
+    text-align: center;
+  }
+}
