@@ -4,7 +4,7 @@ import myAxios from '../my-axios';
 const ReminderScheduleForm = ({ user }) => {
   const [days, setDays] = useState("Sunday");
   const [times, setTimes] = useState("08:00 AM");
-  
+  const [reminder, setReminder] = useState("")
  console.log("time", times,days,user)
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,6 +17,7 @@ const ReminderScheduleForm = ({ user }) => {
       });
       // Handle the response, e.g., show a success message or redirect the user
       console.log(response.data);
+      setReminder(response.data)
     } catch (error) {
       // Handle any errors from the request
       console.error(error);
@@ -24,6 +25,10 @@ const ReminderScheduleForm = ({ user }) => {
   };
 
   return (
+    <div>
+      {reminder && 
+        <h3>{reminder.message}</h3>
+      }
     <form onSubmit={handleSubmit}>
       <div className="mb-3 fs-6">
         <label className="form-label">Days:</label>
@@ -62,6 +67,7 @@ const ReminderScheduleForm = ({ user }) => {
         Save Reminder Schedule
       </button>
     </form>
+    </div>
   );
 };
 
