@@ -4,7 +4,15 @@
 - React,javascript
 - MongoDB - Atlas database, Mongoose
 - Register, Login, Update user profile data 
-- React,javascript
+
+clone the repo
+for frontend
+change directory to client then run npm install
+start development server with npm start
+navigate to http://localhost:3000 in your browser to access app
+
+# Path
+Register User -> Login User -> Update medication and add /View user Profile
 
 ## Tech Stack
 
@@ -12,19 +20,45 @@
 
 **Server:** Node, Express, mongoDB, JWT
 
-API
-The server code can be found here
-GET /api/users/medication :: returns array of medication reminders associated with user
-POST /api/users/medication :: creates medication reminder
-PUT /api/users/medication:: updates medication reminder
-Develop
-To develop this app's front end, make sure you have node and npm installed, then:
+## Authors
 
-clone the repo
-for frontend
-change directory to client then run npm install
-start development server with npm start
-navigate to http://localhost:3000 in your browser to access app
+- [@octokatherine](https://github.com/Javedansari1993/kratinAssigment)
+
+## API Reference
+
+#### Get all items
+
+```http
+  GET /api/users/medications
+```
+
+#### Get item
+
+```http
+  GET /api/users/medications/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of patientId |
+
+#### Add medication
+
+```http
+  POST /api/users/medications
+```
+
+
+#### Update Medication deatails
+
+```http
+  PUT /api/users/medications/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of PatientId |
+
 
 for backend 
 change to server then npm run dev
@@ -38,3 +72,6 @@ user can add more modication  details
 delete medication details 
 add service page , contact to us, 
 and deploy full mern website 
+
+## 🛠 Skills
+Javascript, HTML, CSS...Express, node , mongoDB, react , redux, bootstrap, tailwind
