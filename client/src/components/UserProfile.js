@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import myAxios from "../my-axios";
+import Footer from "./Footer";
 
 const UserProfile = ({ user }) => {
     const [medicationDetails, setMedicationDetails] = useState([]);
@@ -55,6 +56,7 @@ const UserProfile = ({ user }) => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 };

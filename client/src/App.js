@@ -168,7 +168,6 @@ const App = () => {
             )}
           </Routes>
         </div>
-        <Footer/>
       </Router>
     </div>
   );

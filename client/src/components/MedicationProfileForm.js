@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import myAxios from '../my-axios';
+import Footer from './Footer';
 
 const MedicationProfileForm = ({ user }) => {
   const [medicationName, setMedicationName] = useState('');
@@ -8,6 +9,8 @@ const MedicationProfileForm = ({ user }) => {
   const [specialInstructions, setSpecialInstructions] = useState('');
   const [medicationDetails, setMedicationDetails] = useState([]);
   const [activeGrid, setActiveGrid] = useState(false);
+  console.log("active", activeGrid, medicationDetails)
+  
 //  console.log("medicom",user)
   useEffect(() => {
     // Fetch the user's medication details if available
@@ -20,12 +23,16 @@ const MedicationProfileForm = ({ user }) => {
     try {
       const response = await myAxios.get(`/api/users/medications/${user._id}`);
       setMedicationDetails(response.data);
-      // console.log("medi", response.data);
+      console.log("medi", response.data);
+     setMedicationName(response.data[0].medicationName)
+     setDosage(response.data[0].dosage)
+     setFrequency(response.data[0].frequency)
+     setSpecialInstructions(response.data[0].specialInstructions)
       // setActiveGrid(true);
+      setActiveGrid(!activeGrid);
     } catch (error) {
       console.error(error);
     }
-    setActiveGrid(!activeGrid);
   };
 
   const handleSubmit = async (e) => {
@@ -53,7 +60,8 @@ const MedicationProfileForm = ({ user }) => {
           frequency,
           specialInstructions,
         });
-        console.log(response.data);
+        setMedicationDetails([response.data]);
+        setActiveGrid(!activeGrid);
       }
     } catch (error) {
       console.error(error);
@@ -63,7 +71,7 @@ const MedicationProfileForm = ({ user }) => {
   // Render the form if medication details don't exist, otherwise render update button
   return (
     <div>
-      {medicationDetails.length === 0 || !activeGrid ? (
+      {!activeGrid ? (
         <div>
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
